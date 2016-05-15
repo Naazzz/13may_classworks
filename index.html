@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+	//yazilish terzleri
+	var myColor=["Red","Green","White","Black"];
+	document.write("<br>"+"<b>yazilish terzleri</b> "+"<br>");
+	document.write(myColor.join()+"<br>");
+	document.write(myColor.join("+")+"<br>");
+
+	//sorting of array
+	var arr1 = [3,8,7,6,5,-4,-3,2,1];
+	document.write("<br>"+"<b>sorting of array</b> "+"<br>");
+	document.write(arr1.sort());
+	document.write("<br>");
+	var arr1 = [3,8,7,6,5,-4,-3,2,1];
+	var min;
+	for(var i=0;i<arr1.length-1;i++)
+for(var j=i+1;j<arr1.length;j++)
+	{
+		if(arr1[i]>arr1[j]){
+			min = arr1[i];
+			arr1[i]=arr1[j];
+			arr1[j] = min;		
+			}
+	}
+	document.write(arr1);
+document.write("<br>");
+
+// sum of array
+var array= [1,2,3,4,5,6];
+var sum=0;
+for(var j=0;j<array.length;j++){
+sum=sum+array[j];
+}
+document.write("<br>"+"<b>sumof array:</b> "+sum+"<br>");
+
+//property of object
+
+var student = {
+	name: "David Rayy",
+	sclass:"VI",
+	rollno: 12};
+document.write("<br>"+"<b>property of object</b> "+"<br>");
+document.write(Object.getOwnPropertyNames(student)); 
+document.write("<br>");
+document.write(Object.getOwnPropertyNames(student).length); 
+
+// ededin reqemlerini tersine yazmaq
+var x=123456;
+document.write("<br>"+"<br>"+"<b>ededin reqemlerini tersine yazmaq</b> "+"<br>");
+var y=x.toString();
+document.write(y);
+document.write("<br>");
+
+var result='';
+for(var i=0;i<y.length;i++)
+	result += y[y.length-1-i];
+
+document.write(result);
+
+
+// first letter case sense
+var result ='';
+var a= " the quick brown fox";
+document.write("<br>"+"<b>first letter case sense</b> "+"<br>");
+for(var i=0;i<a.length-1;i++)
+{
+		
+		if(a[i]==" ")
+			result+=a[i+1].toUpperCase();
+		else
+			result+=a[i+1];
+}
+document.write(result);
+
+// same letter case
+z="Treee Vaannnian";
+z="zakkumun konlu biittanedir"
+document.write("<br>"+"<br>"+"<b>same letter case</b> "+"<br>");
+document.write("<br>"+z+"<br>");
+
+var counter=1;
+for(var i=0; i<z.length-1;i++){
+	if(z[i]==z[i+1])
+		counter++;
+	else if(counter>1){
+		document.write(z[i]+" = "+counter+"<br>")
+		counter=1;
+	}
+}
+
+
+/*function bar() {
+    return foo;
+    foo = 10;
+    function foo() {}
+    var foo = '11';
+}
+alert(typeof bar());*/
+/*var x = 3;
+
+var foo = {
+    x: 2,
+    baz: {
+        x: 1,
+        bar: function() {
+            return this.x;
+        }
+    }
+}
+
+var go = foo.baz.bar;
+
+alert(go());
+alert(foo.baz.bar)*/
+
+
+
+/*var bar = 1,
+    foo = {};
+
+foo: {
+    bar: 2;
+    baz: ++bar;
+};
+
+alert(foo.baz + foo.bar + bar);*/
+
+
+/*var myArr = ['foo', 'bar', 'baz'];
+myArr[2];
+console.log('2' in myArr);*/
+
+alert(NaN === NaN);
+</script>
+</body>
+</html>
